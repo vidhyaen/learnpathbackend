@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "crossorgin",
+    "type": "java.lang.String",
+    "description": "A description for 'crossorgin'"
+  },
+  {
+    "name": "CrossOrigin",
+    "type": "java.lang.String",
+    "description": "A description for 'CrossOrigin'"
+  }
+]}
