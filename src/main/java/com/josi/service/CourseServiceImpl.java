@@ -3,6 +3,7 @@ import com.josi.model.Course;
 import com.josi.model.Signup;
 import com.josi.repository.SignupRepository;
 import com.josi.repository.CourseRepository;
+import com.josi.repository.TopicRepository;
 import com.josi.service.CourseService;
 
 import org.hibernate.annotations.FetchProfile.FetchOverride;
@@ -16,16 +17,23 @@ import java.util.List;
 public class CourseServiceImpl implements CourseService {
 
     @Autowired
-    private CourseRepository CourseRepository;
+    private CourseRepository courseRepository;
 
     @Override
     public Course saveCourse(Course course) {
-        return CourseRepository.save(course);
+        return courseRepository.save(course);
     }
 
     @Override
     public List<Course> getAllCourses() {
-        return CourseRepository.findAll();
+        return courseRepository.findAll();
+    }
+
+    @Override
+    public Course getCourse(int id) {
+        return courseRepository.findById(id).get();
+      
+
     }
 
 }
